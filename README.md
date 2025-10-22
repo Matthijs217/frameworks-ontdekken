@@ -56,6 +56,10 @@ https://github.com/Matthijs217/11ty
 
 - Gemak <!-- Documentatie, snippets, filters werkt dat lekker -->
   Ik vind de documentatie heel fijn voor een beginnend framework developer. Ik volgde de stappen makkelijk om een project te starten en wat je daarna allemaal kan. Sommige docs vind ik moeilijk te volgen. Maar deze heeft wel echt een soort chronologische volgorde erin zitten wat ik erg fijn vind. Ik ben er nog niet echt achter hoe die filters nou precies werken, dus misschien is dat nog wat onduidelijk.
+
+  Als extra voorbeeld, ik ben bezig met een login systeem en er komt een error en kijk hoe mooi ze dat afhandelen:
+  <img width="457" height="928" alt="image" src="https://github.com/user-attachments/assets/e7690321-0321-484a-88c9-f666646f4649" />
+
   
 - Bevindingen <!-- -->
 
