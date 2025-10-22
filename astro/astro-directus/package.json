@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "astro-directus",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,6 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@directus/sdk": "^20.1.0",
+    "@supabase/supabase-js": "^2.76.1",
     "astro": "^5.14.8"
   }
 }
