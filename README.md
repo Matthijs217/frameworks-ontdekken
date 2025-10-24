@@ -76,4 +76,6 @@ Directus bied een visual studio. Hierin kan je dus de content gemakkelijk aanpas
 #### Supabase
 
 Supabase is een BaaS (backend as a service). Het biedt een kant-en-klare toolkit met een PostgreSQL-database, authenticatie, realtime-functies, opslag, en automatisch gegenereerde API's. Astro bied een uitgebreide documentatie in samenwerking met supabase om dit helemaal in te stellen voor Astro. Hier word stap voor stap uitgelegd hoe je een authenticatie installeert voor een inlog systeem. Je kan verschillende authenticaties aanzetten zoals gewone gmail authenticatie, maar ook Github, Google, Apple en zelfs Figma!
+
+Supabase is voor mensen met kennis ook nog redelijk lastig om te gebruiken vind ik en vereist wel wat tutorials.
 https://docs.astro.build/ar/guides/backend/supabase/
