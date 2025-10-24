@@ -13,12 +13,15 @@ https://github.com/Matthijs217/11ty
 
 ### Developer eXperience
 - Functionaliteit <!-- Ontwikkeling ervaring, werkt het lekker -->
+  
   Ik vond 11ty best makkelijk werken moet ik zeggen, maar ik maakte wel gebruik van een [tutorial](https://11ty.rocks/posts/create-your-first-basic-11ty-website/). Maar als ik het zonder moest doen vond ik het wel wat lastiger te begrijpen. Je kan wel veel templates ook gebruiken zoals; Nunjucks, Liquid etc..
   
 - Betrouwbaar <!-- Performance, hoe word er om gegaan met bugs bijvoorbeeld -->
+
   11ty maakt gebruik van een github repo waar je bijvoorbeeld een bugg in kan delen. Deze houden ze ook goed actief bij dus daar word wel goed mee om gegaan. Ik vind hun eigen website heel onoverzichtelijk en zat echt te zoeken waar wat zit, de docs zijn dan ook niet lekker te volgen.
   
 - Gemak <!-- Documentatie, snippets, filters werkt dat lekker -->
+  
   Zoals ik al zei vond ik de docs erg onoverzichtelijk en het voelt gewoon niet lekker ofzo. Ik heb een kleine pagina gemaakt dat ging wel maar het was erg zoeken, meer dan met andere frameworks
   
 - Bevindingen <!-- -->
