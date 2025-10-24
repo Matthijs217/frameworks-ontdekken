@@ -35,14 +35,18 @@ https://github.com/Matthijs217/11ty
 - Kennis <!-- Kunnen ze makkelijk omgaan met de CMS of hebben ze kennis nodig over frontend.  -->
 - Bevindingen <!-- -->
   
-## Astro + ?
+## Astro + Supabase (directus)
 
 ### User eXperience
 - Doelgroep <!-- Wie zijn de gebruikers, wat voor apparaten, snel internet of niet? Daarna -> wat voor type site deze stack genereert (bijv zwaar op 3d animatie of veel javascript?)  -->
   Astro is gemaakt voor "content gerichte sites" zoals: blogs, webshops of documentatie. Het is erg handig voor elke gebruiker aangezien het werkt met een 0kb JS wat zorgt dat de site snel is, dus ook mensen met een oude telefoon of slome 4g kunnen de site makkelijk gebruiken.
   
-- WCAG <!-- WCAG test, device gewoon alles.  -->
-  ??
+- UX Test (Lighthouse)
+  Astro is echt top qua performance en lighthouse. Ik heb een simpele fetch een simpele pagina met wat articles een formulier etc. Ik laad de blogs in via supabase en de lighthouse komt gewoon met 2x 100
+  <img width="888" height="726" alt="image" src="https://github.com/user-attachments/assets/a149a0db-ed00-4050-8505-8442d1069a42" />
+
+  ik heb verder nog een handmatige accessibility test gedaan en deze ging ook helemaal top.
+
   
 - Bevindingen <!-- Wat valt er op... -->
 
