@@ -1,6 +1,6 @@
 # frameworks-ontdekken
 
-## 11ty
+## **11ty**
 https://github.com/Matthijs217/11ty
 
 ### User eXperience
@@ -32,11 +32,9 @@ https://github.com/Matthijs217/11ty
 - Kennis <!-- Kunnen ze makkelijk omgaan met de CMS of hebben ze kennis nodig over frontend.  -->
 Directus bied een visual studio. Hierin kan je dus de content gemakkelijk aanpassen naar wat je wilt. Dit is voor mensen zonder enige code ervaring of cms ervaring super gemakkelijk om te gebruiken. Daarnaast heeft directus ook een mooie getting started voor meer uitleg.
 
-
-  
 - Bevindingen <!-- -->
 
-## React
+## **React**
 
 ### User eXperience
 - Doelgroep <!-- Wie zijn de gebruikers, wat voor apparaten, snel internet of niet? Daarna -> wat voor type site deze stack genereert (bijv zwaar op 3d animatie of veel javascript?)  -->
@@ -53,7 +51,7 @@ Directus bied een visual studio. Hierin kan je dus de content gemakkelijk aanpas
 - Kennis <!-- Kunnen ze makkelijk omgaan met de CMS of hebben ze kennis nodig over frontend.  -->
 - Bevindingen <!-- -->
   
-## Astro + Supabase (directus)
+## **Astro + Supabase (directus)**
 
 ### User eXperience
 - Doelgroep <!-- Wie zijn de gebruikers, wat voor apparaten, snel internet of niet? Daarna -> wat voor type site deze stack genereert (bijv zwaar op 3d animatie of veel javascript?)  -->
