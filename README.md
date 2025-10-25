@@ -5,7 +5,7 @@ https://github.com/Matthijs217/11ty
 
 ### User eXperience
 - Doelgroep <!-- Wie zijn de gebruikers, wat voor apparaten, snel internet of niet? Daarna -> wat voor type site deze stack genereert (bijv zwaar op 3d animatie of veel javascript?)  -->
-  11ty is ideaal voor blogs, documentatie en e-commerce content. Eigenlijk alles waarbij snelle eerste render en navigatie belangrijk zijn. 11ty genereert statische HTML, dus geen JS nodig waardoor het dus voor veel mesnen toegankelijk is en het dus super werkt op low-end devices en trage netwerken. 
+  11ty is ook ideaal voor blogs, documentatie en e-commerce content. Eigenlijk alles waarbij snelle eerste render en navigatie belangrijk zijn. 11ty genereert statische HTML d.m.v markdown, dus geen JS nodig waardoor het dus voor veel mensen toegankelijk is en het dus super werkt op low-end devices en trage netwerken. 
 
 - WCAG <!-- WCAG test, device gewoon alles.  -->
 
