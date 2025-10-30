@@ -1,0 +1,142 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { supabase } from "../lib/supabase";
+
+const accessToken = Astro.cookies.get("sb-access-token");
+const refreshToken = Astro.cookies.get("sb-refresh-token");
+
+if (!accessToken || !refreshToken) {
+  return Astro.redirect("/signin");
+}
+
+let session;
+try {
+  session = await supabase.auth.setSession({
+    refresh_token: refreshToken.value,
+    access_token: accessToken.value,
+  });
+  if (session.error) {
+    Astro.cookies.delete("sb-access-token", {
+      path: "/",
+    });
+    Astro.cookies.delete("sb-refresh-token", {
+      path: "/",
+    });
+    return Astro.redirect("/signin");
+  }
+} catch (error) {
+  Astro.cookies.delete("sb-access-token", {
+    path: "/",
+  });
+  Astro.cookies.delete("sb-refresh-token", {
+    path: "/",
+  });
+  return Astro.redirect("/signin");
+}
+
+const email = session.data.user?.email;
+
+type Post = {
+  id: number;
+  title: string;
+  content: string | null;
+  created_at: string | null;
+};
+
+// Fetch latest posts from Supabase (server-side)
+const { data, error: postsError } = await supabase
+  .from("supablog_posts")
+  .select("id, title, content, created_at")
+  .order("created_at", { ascending: false });
+
+// cast once for convenience in the template
+const posts = data as Post[] | null;
+
+---
+<Layout title="dashboard">
+  <header>
+    <h1>Welcome {email}</h1>
+    <p>We are happy to see you here</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Create post</h2>
+      <form action="/api/posts/create" method="post">
+        <label for="title">Title</label>
+        <input id="title" name="title" type="text" required />
+
+        <label for="content">Content</label>
+        <textarea id="content" name="content" rows="6"></textarea>
+
+        <button type="submit">Create post</button>
+      </form>
+    </section>
+    <section>
+      <h2>Test search</h2>
+      <form action="/api/search" method="get">
+        <label for="q">Search</label>
+        <input id="q" name="q" type="search" />
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Recent items</h2>
+
+      {postsError ? (
+        <p class="error">Fout bij laden posts</p>
+      ) : null}
+
+      {posts && posts.length > 0 ? (
+        <div class="posts">
+          {posts.map((post) => (
+            <article class="post">
+              <h3>{post.title}</h3>
+              <p>{post.created_at ? new Date(post.created_at).toLocaleString() : null}</p>
+              <div class="post-content">
+                {post.content ? post.content : <em>(Geen inhoud)</em>}
+              </div>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <p>Geen posts gevonden.</p>
+      )}
+    </section>
+
+    <section>
+      <h2>Account</h2>
+      <form action="/api/auth/signout" method="post">
+        <button type="submit">Sign out</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+  </footer>
+</Layout>
+
+<style>
+  .posts {
+    display: grid;
+    gap: 1rem;
+    max-width: 800px;
+  }
+
+  .post {
+    padding: 1rem;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    border-radius: 6px;
+  }
+
+  .post h3 {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .post-content {
+    color: #333;
+    margin-top: 0.5rem;
+  }
+</style>

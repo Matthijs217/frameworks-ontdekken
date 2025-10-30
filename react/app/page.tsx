@@ -3,9 +3,7 @@ export default async function Page() {
   const posts = await data.json()
   return (
     <ul>
-      {posts.map((post) => (
-        <li key={post.id}>{post.title}</li>
-      ))}
+      test
     </ul>
   )
 }
