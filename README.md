@@ -5,6 +5,7 @@ https://github.com/Matthijs217/11ty
 
 ### User eXperience
 - Doelgroep <!-- Wie zijn de gebruikers, wat voor apparaten, snel internet of niet? Daarna -> wat voor type site deze stack genereert (bijv zwaar op 3d animatie of veel javascript?)  -->
+
   11ty is ook ideaal voor blogs, documentatie en e-commerce content. Eigenlijk alles waarbij snelle eerste render en navigatie belangrijk zijn. 11ty genereert statische HTML d.m.v markdown, dus geen JS nodig waardoor het dus voor veel mensen toegankelijk is en het dus super werkt op low-end devices en trage netwerken. 
 
 - WCAG <!-- WCAG test, device gewoon alles.  -->
@@ -37,19 +38,29 @@ Directus bied een visual studio. Hierin kan je dus de content gemakkelijk aanpas
 ## **React**
 
 ### User eXperience
-- Doelgroep <!-- Wie zijn de gebruikers, wat voor apparaten, snel internet of niet? Daarna -> wat voor type site deze stack genereert (bijv zwaar op 3d animatie of veel javascript?)  -->
-- WCAG <!-- WCAG test, device gewoon alles.  -->
-- Bevindingen <!-- Wat valt er op... -->
+- Doelgroep
 
+React is niet bedoeld voor mensen zonder JavaScript, react runt op JS en daarom is dat onhandig voor de mensen zonder JS.
+ 
+- WCAG <!-- WCAG test, device gewoon alles.  -->
+  
 ### Developer eXperience
 - Functionaliteit <!-- Ontwikkeling ervaring, werkt het lekker -->
+
+Ik vond react prima te installeren, maar ik vond het wat minder lekkerder werken om eerlijk te zijn. Het was niet vanzelfsprekend om voor de simpele install te gaan. 
+ 
 - Betrouwbaar <!-- Performance, hoe word er om gegaan met bugs bijvoorbeeld -->
+
+React is erg betrouwbaar. Het heeft een grote community, heel veel docs beschikbaar en je kan makkelijk een bugg reporten bij de github issues. Het bestaat ook al sinds 2013, dus dit helpt ook heel erg.
+
 - Gemak <!-- Documentatie, snippets, filters werkt dat lekker -->
-- Bevindingen <!-- -->
+
+Ik vind de docs niet heel uitgebreid, de setup staat er maar daar houd het wel bij op. Natuurlijk staan er online heel wat dingen beschikbaar en is er veel support daarbij.
 
 ### Content Management eXperience
 - Kennis <!-- Kunnen ze makkelijk omgaan met de CMS of hebben ze kennis nodig over frontend.  -->
-- Bevindingen <!-- -->
+
+Er is een hele [documentatie](https://directus.io/docs/tutorials/projects/build-a-multi-user-chat-with-react-and-directus-realtime) waar bij er word uitgelegd hoe directus en react samen werken en hoe je dit zou kunnen gebruiken. Erg handig als je het voor het eerst gebruikt op react. 
   
 ## **Astro + Supabase (directus)**
 
@@ -95,3 +106,7 @@ Supabase is een BaaS (backend as a service). Het biedt een kant-en-klare toolkit
 
 Supabase is voor mensen met kennis ook nog redelijk lastig om te gebruiken vind ik en vereist wel wat tutorials.
 https://docs.astro.build/ar/guides/backend/supabase/
+
+## **Uiteindelijke conclusie**
+
+Als ik een CMS moet kiezen voor mensen zonder tech ervaring raar ik Directus aan. Als ik een snelle website heel simpel nodig heb zou ik voor 11ty gaan, maar als ik een iets uitgebreidere site zou gaan zou ik wel Astro pakken aangezien dit ook heeel licht is en lekker werkt. Als ik meer interactieve UI nodig heb en veel javascript en animaties zou ik React pakken (eventueel in Astro).
