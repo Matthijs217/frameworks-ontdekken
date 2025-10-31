@@ -35,32 +35,69 @@ Directus bied een visual studio. Hierin kan je dus de content gemakkelijk aanpas
 
 - Bevindingen <!-- -->
 
-## **React**
+## **React + supabase (directus)**
 
 ### User eXperience
 - Doelgroep
 
-React is niet bedoeld voor mensen zonder JavaScript, react runt op JS en daarom is dat onhandig voor de mensen zonder JS.
+Next.js word eigenlijk gebruikt voor wat zwaardere apps. Omdat het is gebouwd op React en react javascript gebruikt duurt het langer om te laden. 
  
 - WCAG <!-- WCAG test, device gewoon alles.  -->
+
+<img width="239" height="706" alt="image" src="https://github.com/user-attachments/assets/a58c2e49-5ff7-4d6a-a9ea-1eab1a048ad6" />
+<img width="304" height="500" alt="image" src="https://github.com/user-attachments/assets/6917aac3-e271-4bd8-af70-afb3cc2f49c7" />
+
+Zoals je ziet is Next.js dus wat trager dan bijvoorbeeld een Astro of een 11ty. Het gebruikt veel javascript, maar daardoor kan je wel makkelijk tussen de paginas navigeren zonder dat alles herlaad
   
 ### Developer eXperience
 - Functionaliteit <!-- Ontwikkeling ervaring, werkt het lekker -->
 
-Ik vond react prima te installeren, maar ik vond het wat minder lekkerder werken om eerlijk te zijn. Het was niet vanzelfsprekend om voor de simpele install te gaan. 
+Ik vond next.js prima te installeren, maar ik vond het wat minder lekkerder werken om eerlijk te zijn. Het was niet vanzelfsprekend om voor de simpele install te gaan en ik moest wel echt de docs erbij houden om het goed te kunnen installeren.
+
+**SSG:**
+Next.js gebruikt standaard SSG (Static Site Generator) als je geen fetch etc gebruikt.
+```
+function About() {
+  return <div>About</div>
+}
  
+export default About
+```
+**SSR:**
+ Next.js bied natuurlijk ook SSR (Server side rendering) als je bijvoorbeeld iets wilt fetchen en met elke request een nieuwe pagina wilt.
+ ```
+ export default function Page({ data }) {
+  // Render data...
+}
+ 
+// This gets called on every request
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(`https://.../data`)
+  const data = await res.json()
+ 
+  // Pass data to the page via props
+  return { props: { data } }
+}
+```
+
 - Betrouwbaar <!-- Performance, hoe word er om gegaan met bugs bijvoorbeeld -->
 
-React is erg betrouwbaar. Het heeft een grote community, heel veel docs beschikbaar en je kan makkelijk een bugg reporten bij de github issues. Het bestaat ook al sinds 2013, dus dit helpt ook heel erg.
+Next.js is erg betrouwbaar. Het heeft een grote community, heel veel docs beschikbaar waar je stap voor stap dingen terug kan vinden en je kan makkelijk een bugg reporten bij de github issues. Het bestaat ook al sinds 2016, dus dit helpt ook heel erg.
+
+<img width="515" height="822" alt="image" src="https://github.com/user-attachments/assets/3c4ef244-2e54-4bc6-9f65-e325e2c26da2" />
+
 
 - Gemak <!-- Documentatie, snippets, filters werkt dat lekker -->
 
-Ik vind de docs niet heel uitgebreid, de setup staat er maar daar houd het wel bij op. Natuurlijk staan er online heel wat dingen beschikbaar en is er veel support daarbij.
+Ik vind de [installatie](https://supabase.com/docs/guides/getting-started/quickstarts/nextjs) heel lekker werken opzich. Dit waren wel de docs van supabase, maar als ik scroll door de next.js docs zie ik ook heel duidelijk elk onderwerp en een goeie uitleg hoe je bijvoorbeeld de a11y optimaliseer.
 
 ### Content Management eXperience
 - Kennis <!-- Kunnen ze makkelijk omgaan met de CMS of hebben ze kennis nodig over frontend.  -->
 
 Er is een hele [documentatie](https://directus.io/docs/tutorials/projects/build-a-multi-user-chat-with-react-and-directus-realtime) waar bij er word uitgelegd hoe directus en react samen werken en hoe je dit zou kunnen gebruiken. Erg handig als je het voor het eerst gebruikt op react. 
+
+Ik heb supabase gebruikt om de inlog te maken, dit was echt heel simpel. Maar voor supabase moet je wel echt wat ervaring hebben want dat is wat lastiger voor een beginnend of onervaren developer. 
   
 ## **Astro + Supabase (directus)**
 
